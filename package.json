@@ -1,0 +1,26 @@
+{
+	"name": "testing-servay",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Xeron07/testing-servay.git"
+	},
+	"author": "Nihal",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Xeron07/testing-servay/issues"
+	},
+	"homepage": "https://github.com/Xeron07/testing-servay#readme",
+	"dependencies": {
+		"express": "^4.17.1",
+		"nodemon": "^1.19.2",
+		"passport": "^0.4.0",
+		"passport-google-oauth20": "^2.0.0"
+	}
+}
