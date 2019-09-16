@@ -1,9 +1,17 @@
+//modules
 const express = require('express');
 const authApi = require('./config/key');
 const mongoose = require('mongoose');
-require('./services/passport');
+
+//main router object
 const app = express();
+
+//passport authentication
+require('./services/passport');
 require('./auth/authRouter')(app);
+
+//models for mongodb database
+require('./models/User');
 
 app.get('/', (req, res) => {
 	res.send('hello there');
