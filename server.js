@@ -12,8 +12,8 @@ require('./models/User');
 const app = express();
 
 //passport authentication
-require('./services/passport');
-require('./auth/authRouter')(app);
+require('./services/passportGoogle');
+require('./services/passportFacebook');
 
 app.get('/', (req, res) => {
 	res.send('hello there');
@@ -29,6 +29,9 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+
+require('./auth/authGoogleRouter')(app);
+require('./auth/authFaceboolRouter')(app);
 
 const PORT = process.env.PORT || 5000;
 
